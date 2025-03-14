@@ -18,8 +18,6 @@
             height: 100vh;
             padding: 20px;
             position: fixed;
-            left: -250px; /* Start hidden off-screen */
-            transition: left 0.3s ease;
         }
 
         .sidebar h2 {
@@ -49,35 +47,16 @@
         }
 
         .content {
-            margin-left: 0;
+            margin-left: 270px;
             padding: 20px;
             flex-grow: 1;
-            transition: margin-left 0.3s ease;
         }
 
         header {
             background: #1abc9c;
             padding: 20px;
+            text-align: center;
             color: white;
-            display: flex;
-            justify-content: space-between; /* Space between icon and header text */
-            align-items: center;
-        }
-
-        .menu-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .menu-toggle {
-            cursor: pointer;
-            font-size: 30px;
-            margin-right: 10px; /* Space between icon and text */
-        }
-
-        .menu-text {
-            font-size: 18px;
-            font-weight: bold;
         }
 
         .info-box {
@@ -86,41 +65,28 @@
             margin-top: 20px;
             border-left: 5px solid #1abc9c;
         }
-
-        /* Optional: Styles to make the sidebar visible when toggled */
-        .sidebar.active {
-            left: 0;
-        }
-
-        .content.active {
-            margin-left: 250px;
-        }
-
     </style>
 </head>
 <body>
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar">
         <h2>Menu</h2>
         <ul>
             <li><a href="index.html">Beranda</a></li>
             <li><a href="data.html">Data</a></li>
             <li><a href="pic.html">Pic Trasnport Planning</a></li>
-            <li><a href="request.html">Request Percepatan</a></li>
+<li><a href="request.html">request percepatan</a></li>
         </ul>
     </div>
     
-    <div class="content" id="content">
+    <div class="content">
         <header>
-            <div class="menu-container">
-                <span class="menu-toggle" id="menu-toggle">&#x022EE;</span> <!-- Three dots icon -->
-                <span class="menu-text">Menu</span> <!-- Text next to the icon -->
-            </div>
-            <h1>TRASNPORT PLANNING</h1>
+            <h1>Dashboard Informasi</h1>
         </header>
 
         <div class="info-box">
             <marquee direction="right"scrollamount='5'><font color='black' size='5'>TRANSPORT PLANNING</marquee>
   <marquee direction="left">Created By MasMiftah</marquee>
+
         </div>
 
         <div class="info-box">
@@ -128,16 +94,5 @@
             <p>Update: 12 Maret 2025</p>
         </div>
     </div>
-
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
-        const content = document.getElementById('content');
-
-        menuToggle.addEventListener('click', function() {
-            sidebar.classList.toggle('active');
-            content.classList.toggle('active');
-        });
-    </script>
 </body>
 </html>
