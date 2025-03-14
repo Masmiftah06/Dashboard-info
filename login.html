@@ -57,7 +57,7 @@
 
             if (user === "admin" && pass === "1234") {
                 localStorage.setItem("loggedIn", true);
-                window.location.href = "index.html"; // Redirect ke dashboard
+                window.location.href = "dashboard.html"; // Redirect ke dashboard
             } else {
                 document.getElementById("error").style.display = "block";
             }
@@ -65,7 +65,7 @@
 
         // Cek apakah sudah login
         if (localStorage.getItem("loggedIn")) {
-            window.location.href = "index.html";
+            window.location.href = "dashboard.html";
         }
     </script>
 </body>
