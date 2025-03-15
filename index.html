@@ -139,5 +139,13 @@
             }
         }
     </script>
+<button onclick="logout()">Logout</button>
+
+<script>
+    function logout() {
+        sessionStorage.clear();
+        window.location.href = "login.html"; // Ganti dengan nama file halaman login
+    }
+</script>
 </body>
 </html>
